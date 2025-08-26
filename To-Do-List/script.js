@@ -1,8 +1,5 @@
-// Load tasks from localStorage, or use default if none exist
-let toDoList = JSON.parse(localStorage.getItem('toDoList')) || [{
-    item: 'Buy Things',
-    dueDate: '26/08/2025'
-}];
+// Load tasks from localStorage, or use default empty array if none exist
+let toDoList = JSON.parse(localStorage.getItem('toDoList')) || [];
 
 // Initial call to display the tasks when the page loads
 displayItems();
