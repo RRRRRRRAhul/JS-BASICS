@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      .calculator {
+        border: 1px solid #100f0f;
+        border-radius: 5px;
+        width: 300px;
+      }
+      #display {
+        width: 90%;
+        margin: 10px;
+        height: 40px;
+        border-radius: 5px;
+        font-size: larger;
+      }
+      .btn {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 10px;
+        
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+      .btn-item {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #e0e0e0;
+        cursor: pointer;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" id="display" />
+      <div class="btn">
+        <button class="btn-item" onclick="currentDisplay ='';
+            document.getElementById('display').value = currentDisplay;">C</button>
+        <button
+          class="btn-item"
+          onclick="currentDisplay += '1';
+            document.getElementById('display').value = currentDisplay;"
+        >
+          1
+        </button>
+        <button class="btn-item" onclick="currentDisplay += '2';
+            document.getElementById('display').value = currentDisplay;">2</button>
+        <button class="btn-item" onclick="currentDisplay += '3';
+            document.getElementById('display').value = currentDisplay;">3</button>
+        <button class="btn-item" onclick="currentDisplay += '4';
+            document.getElementById('display').value = currentDisplay;">4</button>
+        <button class="btn-item" onclick="currentDisplay += '5';
+            document.getElementById('display').value = currentDisplay;">5</button>
+        <button class="btn-item" onclick="currentDisplay += '6';
+            document.getElementById('display').value = currentDisplay;">6</button>
+        <button class="btn-item" onclick="currentDisplay += '7';
+            document.getElementById('display').value = currentDisplay;">7</button>
+        <button class="btn-item" onclick="currentDisplay += '8';
+            document.getElementById('display').value = currentDisplay;">8</button>
+        <button class="btn-item" onclick="currentDisplay += '9';
+            document.getElementById('display').value = currentDisplay;">9</button>
+        <button class="btn-item" onclick="currentDisplay += '0';
+            document.getElementById('display').value = currentDisplay;">0</button>
+        <button class="btn-item" onclick="currentDisplay += '+';
+            document.getElementById('display').value = currentDisplay;">+</button>
+        <button class="btn-item" onclick="currentDisplay += '-';
+            document.getElementById('display').value = currentDisplay;">-</button>
+        <button class="btn-item" onclick="currentDisplay += '*';
+            document.getElementById('display').value = currentDisplay;">*</button>
+        <button class="btn-item" onclick="currentDisplay += '/';
+            document.getElementById('display').value = currentDisplay;">/</button>
+        <button class="btn-item" onclick="let result = eval(currentDisplay);
+            document.getElementById('display').value = result;">=</button>
+        <button class="btn-item" onclick="currentDisplay += '.';
+            document.getElementById('display').value = currentDisplay;">.</button>
+      </div>
+    </div>
+    <script>
+      let currentDisplay = "";
+      document.getElementById("display").value = currentDisplay;
+    </script>
+  </body>
+</html>

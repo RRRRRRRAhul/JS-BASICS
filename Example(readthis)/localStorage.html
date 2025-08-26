@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        localStorage.setItem('greeting', 'Hello, World!');
+        const greeting = localStorage.getItem('greeting');
+        console.log(greeting); // Outputs: Hello, World!
+
+        //if you want to convert number value into string
+        localStorage.setItem('age', JSON.stringify(25)); // here we convert number to string using JSON.stringify method
+        const age = localStorage.getItem('age');
+        console.log(age); // Outputs: "25"
+
+        // remove an item
+        localStorage.removeItem('greeting');
+        console.log(localStorage.getItem('greeting')); // Outputs: null
+    </script>
+</body>
+</html>

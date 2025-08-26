@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Myntra Bag</title>
+    <style>
+      .bag-button {
+        background-color: lightgreen;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 10px;
+      }
+      .wish-button {
+        padding: 5px 35px;
+        border: 2px solid black;
+        border-radius: 10px;
+        text-transform: uppercase;
+      }
+      .conatainer{
+        margin-top: 135px;
+        text-align: center;
+      }
+      h1{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>In this practice set i make interactive page with JavaScript</h1>
+    <div class="conatainer">
+      <button
+        class="bag-button"
+        onclick="cardQuantity++;  document.querySelector('.cart-summary').innerHTML = `Your bag has ${cardQuantity} items`"
+      >
+        Add to Bag
+      </button>
+      <button
+        class="wish-button"
+        onclick="cardQuantity--;  document.querySelector('.cart-summary').innerHTML = `Your bag has ${cardQuantity} items`"
+      >
+        Add to Wishlist
+      </button>
+      <button
+        class="bag-button"
+        onclick="cardQuantity+= 2;  document.querySelector('.cart-summary').innerHTML = `Your bag has ${cardQuantity} items`"
+      >
+        Add 1+1 sale item
+      </button>
+
+      <h2 class="cart-summary"></h2>
+    </div>
+
+    <script>
+      let cardQuantity = 0;
+      document.querySelector(
+        ".cart-summary"
+      ).innerHTML = `Your bag has ${cardQuantity} items`;
+    </script>
+  </body>
+</html>
