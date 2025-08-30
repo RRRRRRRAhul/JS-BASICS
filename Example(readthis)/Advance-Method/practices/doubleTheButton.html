@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn {
+        font-size: 15px;
+        height: 30px;
+        width: 90px;
+        background-color: rgb(231, 48, 48);
+        border: none;
+        border-radius: 8px;
+        color: white;
+      }
+      .double {
+        font-size: 30px;
+        height: 60px;
+        width: 180px;
+        background-color: rgb(231, 48, 48);
+        border: none;
+        border-radius: 8px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">Hello</button>
+    <p class="p">
+      If click the button for first time it will get 2x bigger after 2 sec
+    </p>
+    <script>
+      button = document.querySelector(".btn");
+
+      // function that makes the button double in size and we can use it in addEventListenet with the setTimeout() 
+      let double = () => {
+        button.classList.add("double"); // add the double class to increase the size
+        button.classList.remove("btn"); // remove the btn class so that didn't override the double class
+        console.log("hello");
+        const elementToRemove = document.querySelector(".p");
+        elementToRemove.remove(); // remove the pragraph tag's text
+      };
+
+      button.addEventListener("click", () => {
+        setTimeout(double,2000);
+      });
+    </script>
+  </body>
+</html>
