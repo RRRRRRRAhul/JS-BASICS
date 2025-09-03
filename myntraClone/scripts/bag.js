@@ -3,47 +3,46 @@ let bagItemObjects;
 onLoad();
 
 function onLoad() {
-    loadingBagItemObjects();
-    displayBagItems();
-    displayBagSummary();
+  loadingBagItemObjects();
+  displayBagItems();
+  displayBagSummary();
 }
 
 function loadingBagItemObjects() {
-    bagItemObjects = bagItems.map(itemId => {
-        for (i = 0; i < items.length; i++) {
-            if (itemId == items[i].id) {
-                return items[i];
-            }
-        }
-    }) // it's convert items id into the item object that we are gonna use in the displayBagItems() function
+  bagItemObjects = bagItems.map(itemId => {
+    for (i = 0; i < items.length; i++) {
+      if (itemId == items[i].id) {
+        return items[i];
+      }
+    }
+  }) // it's convert items id into the item object that we are gonna use in the displayBagItems() function
 }
 
 function displayBagItems() {
-    let containerElement = document.querySelector('.bag-items-container')
-    let innerHTML = ``;
-    bagItemObjects.forEach(bagItem => {
-        innerHTML += generateItemHTML(bagItem);
-    });
-    containerElement.innerHTML = innerHTML;
+  let containerElement = document.querySelector('.bag-items-container')
+  let innerHTML = ``;
+  bagItemObjects.forEach(bagItem => {
+    innerHTML += generateItemHTML(bagItem);
+  });
+  containerElement.innerHTML = innerHTML;
 }
 
 function displayBagSummary() {
-    let bagSummaryElement = document.querySelector('.bag-summary');
+  let bagSummaryElement = document.querySelector('.bag-summary');
 
-    let totalItem = bagItemObjects.length;
-    let totalMRP = 0;
-    let totalDiscount = 0;
+  let totalItem = bagItemObjects.length;
+  let totalMRP = 0;
+  let totalDiscount = 0;
 
 
-    bagItemObjects.forEach(bagItem => {
-        totalMRP += bagItem.original_price;
-        totalDiscount += (bagItem.original_price - bagItem.current_price);
+  bagItemObjects.forEach(bagItem => {
+    totalMRP += bagItem.original_price;
+    totalDiscount += (bagItem.original_price - bagItem.current_price);
+  });
 
-    });
+  let finalPayment = totalMRP - totalDiscount + convenienceFee;
 
-    let finalPayment = totalMRP - totalDiscount + convenienceFee;
-
-    bagSummaryElement.innerHTML = `<div class="bag-details-container">
+  bagSummaryElement.innerHTML = `<div class="bag-details-container">
             <div class="price-header">PRICE DETAILS (${totalItem} Items) </div>
             <div class="price-item">
               <span class="price-item-tag">Total MRP</span>
@@ -69,16 +68,16 @@ function displayBagSummary() {
 }
 
 function removeFromBag(itemId) {
-    bagItems = bagItems.filter(bagItemId => bagItemId != itemId);
-    localStorage.setItem('bagItem', JSON.stringify(bagItems));
-    loadingBagItemObjects();
-    displayBagIcon(); // TO SHOW THE CORRECT NUMBER IN BAG ICON AND USE IT FROM INDEX.JS FILE
-    displayBagItems();
-    displayBagSummary();
+  bagItems = bagItems.filter(bagItemId => bagItemId != itemId);
+  localStorage.setItem('bagItem', JSON.stringify(bagItems));
+  loadingBagItemObjects();
+  displayBagIcon(); // TO SHOW THE CORRECT NUMBER IN BAG ICON AND USE IT FROM INDEX.JS FILE
+  displayBagItems();
+  displayBagSummary();
 }
 
 function generateItemHTML(item) {
-    return `<div class="bag-item-container">
+  return `<div class="bag-item-container">
             <div class="item-left-part">
               <img class="bag-item-img" src="../${item.image}">
             </div>
