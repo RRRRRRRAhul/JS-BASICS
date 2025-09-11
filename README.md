@@ -36,27 +36,6 @@ This repo contains **JavaScript basics** concepts that are important for web dev
 
 ---
 
-## 📸 Screenshots  
-
-### 🛍 Myntra Functional Clone  
-![Myntra Clone Screenshot](./assets/screenshots/Screenshot-2025-09-11-190326.png)
-
----
-
-### 🐍 Snake Game  
-![Snake Game Screenshot](./assets/screenshots/Screenshot-2025-09-11-190612.png)
-
----
-
-### ✅ To-Do List  
-![To-Do List Screenshot](./assets/screenshots/Screenshot-2025-09-11-190541.png)
-
----
-
-### 💻 Code Example (Snake Game HTML)  
-![Code Screenshot](./assets/screenshots/Screenshot-2025-09-11-190435.png)
-
----
 
 ## 👨‍💻 Author  
 
