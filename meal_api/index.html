@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal & Recipie</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- font-awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Meals & Recipie</h1>
+
+        <!-- submit the food name and get your meal recipie with a random recipie option. -->
+        <div class="meal-container">
+            <form action="" class="mealcontainer-flex" id="submit">
+                <input type="text" placeholder="Search for meals or recipies" id="search" autocomplete="off">
+                <button type="submit" id="submitbtn">
+                    <i class="fas fa-search"></i>
+                </button>  
+            </form>
+            <button class="random-btn" id="random">
+                <i class="fas fa-random"></i> Random Recipie
+            </button>
+        </div>
+
+        <!-- show the meals results here -->
+        <p id="meal-result-heading" class="meal-result-heading">
+
+        </p>
+
+        <!-- meals will be displayed here -->
+        <div class="meals-container">
+            <div id="meals" class="all-meals">
+                
+            </div>
+        </div>
+
+        <!-- single meal info will be displayed here -->
+        <div class="single-meal-container" id="single-meal">
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
