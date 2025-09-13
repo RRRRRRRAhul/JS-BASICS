@@ -19,6 +19,7 @@ This repo contains **JavaScript basics** concepts that are important for web dev
 | 🛍 **Myntra Functional Clone** | [🔗 Live Demo](https://ralmytra.netlify.app/) |
 | 🐍 **Snake Game** | [🔗 Play Now](https://snake-under-wall.netlify.app/) |
 | ✅ **To-Do List** | [🔗 Live Demo](https://ra-to-do.netlify.app/) |
+| 🍽 **Meal API Project** | [🔗 Live Demo](https://mealekhane.netlify.app/) |
 
 ---
 
@@ -35,7 +36,6 @@ This repo contains **JavaScript basics** concepts that are important for web dev
 - **JavaScript (ES6+)** – Logic, DOM manipulation, and interactivity  
 
 ---
-
 
 ## 👨‍💻 Author  
 
