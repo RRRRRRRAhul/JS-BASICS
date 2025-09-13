@@ -24,7 +24,6 @@ submit.addEventListener("submit", (e) => {
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${item}`)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
                 // if there are not any meals that match the search term
                 if (data.meals === null) {
                     resultHeading.innerHTML = `<p>There are no results for ${item}. Try again! </p>`;
@@ -90,7 +89,6 @@ function addMealToDom(meal) {
             break; // use break instead of return so that we can just exit the loop and continue with the rest of the code
         }
     }
-    console.log(ingredients);
 }
 
 // Fetch meal by ID
